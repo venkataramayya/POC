@@ -1,0 +1,33 @@
+.card
+{
+  background-color: #3765c5;
+}
+
+.bg
+{
+  background-color:  #3765c5;
+  color: white;
+}
+a{
+  text-decoration: none;
+  color: white;
+  gap: 2px;
+
+}
+.size{
+  height: 10px;
+
+}
+.fs{
+  font-size: 14px;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+.hover:hover{
+  color: yellow;
+}
+.main{
+  font-size: 15px;
+}
+

@@ -1,0 +1,120 @@
+<nav class="navbar navbar-expand-lg navbar-light  w-100" style="background-color: rgb(255, 255, 255);">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <div class="d-flex gap-4">
+      <!-- Menu Icon -->
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="yellow" class="bi bi-grid"
+          viewBox="0 0 16 16" (click)="toggleMenu()">
+          <path
+            d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+        </svg>
+      </div>
+
+      <!-- Search Bar -->
+      <div>
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="border:0px" />
+      </div>
+    </div>
+
+
+    <!-- Profile & Flag -->
+ <div class="d-flex gap-5">
+  <div>
+    <i class="bi bi-bell" style="color: yellow; font-size: 20px;" (click)="shownotification()"></i>
+  </div>
+  <div class="d-flex gap-5">
+    <img src="flag.png" alt="Flag" width="30px" height="30px" />
+    <img src="images.jpeg" alt="Profile" width="30px" height="30px" class="ms-2" />
+  </div>
+
+ </div>
+  </div>
+</nav>
+
+<!-- Menu Content (Card) -->
+<div *ngIf="isMenuOpen"
+     style="position: fixed; top: 60px; left:11%;   margin-left:100px;
+            width: 1300px; height: 190px;
+             border-radius: 8px; z-index: 29; background-color: rgb(3, 167, 167); ">
+
+  <div class="card" style="background-color: rgb(235, 234, 225); box-shadow: 0 10px 20px 0 rgba(22, 20, 20, 0.4);" >
+    <div class="card-head">
+      <h6 class="ms-4 mt-2">Download App</h6>
+    </div>
+
+    <div class="card-body">
+      <div class="row g-0">
+
+        <!-- QR Code Image -->
+        <div class="col-md-3">
+          <img src="qr code.jpg" class="img-fluid rounded-start" alt="QR Code" width="200px" height="50px">
+        </div>
+
+        <!-- Content Section -->
+        <div class="col-8">
+          <div class="row">
+            <div class="col-4">
+              <p>Help <br> <a href="#">How may I help you?</a></p>
+            </div>
+            <div class="col-3 ms-3">
+              <p>UI Components <br> <a href="#">Bootstrap Components</a></p>
+            </div>
+            <div class="col-3 ms-5">
+              <p>Invoice <br> <a href="#">Simple List, Email Invoice</a></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4">
+              <p>Salary Slips <br> <a href="#">Simple Salary Slips</a></p>
+            </div>
+            <div class="col-3 ms-3">
+              <p>Expense Slips <br> <a href="#">Expenses List</a></p>
+            </div>
+            <div class="col-3 ms-5">
+              <p>Starter Page <br> <a href="#">Start Working</a></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4">
+              <p>Documentation <br> <a href="#">How to Install</a></p>
+            </div>
+            <div class="col-3 ms-3">
+              <p>Change Log <br> <a href="#">Change Log Updates</a></p>
+            </div>
+
+          </div>
+
+        </div> <!-- End of col-8 -->
+
+      </div> <!-- End of row g-0 -->
+    </div> <!-- End of card-body -->
+  </div> <!-- End of card -->
+</div> <!-- End of *ngIf div -->
+
+
+<!-- notification -->
+<div *ngIf="notification"
+     style="position: fixed; top: 35px; left: 82%; transform: translateX(-50%);
+     width: 500px; height: 290px;
+     padding: 10px; border-radius: 8px; z-index: 39; ">
+  <div class="card" style="background-color: rgb(255, 255, 255); color:rgb(45, 46, 47); width: 350px;box-shadow: 0 10px 20px 0 rgba(102, 48, 48, 0.4)">
+    <div class="card-header p-2" style="background-color: rgb(141, 171, 216);">
+      <h4 class="m-0">Notifications</h4>
+    </div>
+    <div class="card-body overflow-auto" style="max-height: 250px;">
+      <div *ngFor="let notification of notifications; let i = index" class="d-flex gap-4 mb-2">
+        <div>
+          <img src="images.jpeg" alt="User Image" width="30" height="30" class="rounded-circle">
+        </div>
+        <div>
+          <strong>{{ notification.name }}</strong>
+          <p class="m-0">{{ notification.message }}</p>
+          <small class="text-muted">{{ notification.time }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

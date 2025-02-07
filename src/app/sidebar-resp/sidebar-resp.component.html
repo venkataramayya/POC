@@ -1,0 +1,33 @@
+
+<div class="sidebar" [class.collapsed]="isCollapsed">
+  <div class="bar">
+    <!-- Menu Sections -->
+    <div class="menu-section" *ngFor="let section of menuSections">
+      <div class="menu-item" (click)="toggleSection(section)" [routerLink]="section.url">
+        <span class="icon">{{ section.icon }}</span>
+        <span class="text">{{ section.text }}</span>
+        <span class="arrow" *ngIf="section.subOptions && !isCollapsed">
+          {{ section.isOpen ? "▲" : "▼" }}
+        </span>
+      </div>
+      <!-- Sub-Options -->
+      @if (section.subOptions && section.isOpen && !isCollapsed) {
+      <div
+        class="menu-item"
+        *ngFor="let option of section.subOptions"
+        [routerLink]="option.url"
+      >
+        <span class="icon">{{ option.icon }}</span>
+        <span class="text">{{ option.text }}</span>
+      </div>
+      }
+    </div>
+  </div>
+  <div class="toggle-btn d-flex align-items-center justify-content-center mt-3" (click)="toggleSidebar()">
+    @if (isCollapsed) {
+     ->
+    } @else {
+      <-
+   }
+  </div>
+</div>

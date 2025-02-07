@@ -1,0 +1,78 @@
+
+
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-8 ms-4">
+
+      <h3>Attendance</h3>
+
+    </div>
+    <div class="col-3 d-flex gap-3">
+      <div>
+        <button class="btn btn-dark"> Edit Attendance </button>
+
+      </div>
+      <div >
+        <select name="" id="" class="form-select bg-primary">
+          <option value="">All</option>
+          <option value="">Today Absent</option>
+          <option value="">Week absent</option>
+        </select>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="row mt-4">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <div class="row mt-4">
+            <div class="col">
+              <div class="container mt-4">
+                <!-- Legend -->
+                <div class="mb-3">
+                  <span class="me-3">
+                    ✅ <strong>Full Day Present</strong>
+                  </span>
+                  <span class="me-3">
+                    🌗 <strong>Half Day Present</strong>
+                  </span>
+                  <span>
+                    ❌ <strong>Full Day Absence</strong>
+                  </span>
+                </div>
+
+                <!-- Attendance Table -->
+                <div class="table-responsive mt-4">
+                  <table class="table table-hover text-center align-middle">
+                    <thead class="">
+                      <tr>
+                        <th class="text-start">EMPLOYEE</th>
+                        <th *ngFor="let day of days">{{ day }}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let employee of employees">
+                        <td class="fw-bold text-start">{{ employee.name }}</td>
+                        <td *ngFor="let status of employee.attendance">
+                          <span  [ngClass]="{
+                            'text-success': status === 'full',
+                            'text-warning': status === 'half',
+                            'text-danger': status === 'absent'
+                          }">
+                          <p>  {{ getStatusIcon(status) }}</p>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

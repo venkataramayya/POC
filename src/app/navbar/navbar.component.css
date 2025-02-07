@@ -1,0 +1,61 @@
+.in {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.int {
+  border: 1px solid rgb(70, 59, 59);
+  outline: none;
+  border-radius: 5px;
+  box-shadow:1px rgb(165, 145, 145);
+
+
+}
+
+
+.card{
+  height: 200px;
+  gap: 0px;
+
+}
+
+.wt{
+  height: 300px;
+}
+.wi{
+  width: 50px;
+}
+.bar{
+  width: 75px;
+  height: 10px;
+}
+.wk{
+  height: 230px;
+}
+
+
+#chart {
+  padding: 0;
+  max-width: 650px;
+  margin: 35px auto;
+}
+
+.width {
+  height: 50px;
+}
+
+.bg-primary {
+  padding: 10px;
+}
+
+
+
+
+ p:hover{
+  color:yellow;
+
+}
+.card{
+  height: 300px;
+ 
+}
