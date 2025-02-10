@@ -1,14 +1,24 @@
 <div class="container-fluid">
+<div class="row ">
+  <div class="col-2">
+
+  </div>
+  <div class="col-10">
+    <app-navbar class="navbar-fixed mt-3"></app-navbar>
+
+  </div>
+</div>
   <div class="row">
     <!-- Sidebar -->
-    <div class="col-2 d-none d-md-block sidebar" [class.d-none]="isSidebarHidden">
+    <div class="col-2 sidebar">
       <app-sidebar-resp></app-sidebar-resp>
     </div>
-
     <!-- Main Content -->
-    <div class="col-10 main-content" [class.col-12]="isSidebarHidden">
-      <app-navbar class="navbar-fixed"></app-navbar>
-      <div class="content-container">
+    <div class="col-10 main-content d-flex flex-column gap-2">
+<div>
+
+</div>
+      <div class="content-container ">
         <router-outlet></router-outlet>
       </div>
     </div>

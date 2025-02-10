@@ -1,8 +1,14 @@
 
+
+<div>
+  <img src="logo.png" alt="" width="300px" height="100px" class="img-fluid">
+</div>
 <div class="sidebar" [class.collapsed]="isCollapsed">
+
   <div class="bar">
     <!-- Menu Sections -->
     <div class="menu-section" *ngFor="let section of menuSections">
+
       <div class="menu-item" (click)="toggleSection(section)" [routerLink]="section.url">
         <span class="icon">{{ section.icon }}</span>
         <span class="text">{{ section.text }}</span>
@@ -25,9 +31,9 @@
   </div>
   <div class="toggle-btn d-flex align-items-center justify-content-center mt-3" (click)="toggleSidebar()">
     @if (isCollapsed) {
-     ->
+      <i class="bi bi-arrow-left-circle-fill" style="font-size: 30px; color:yellow"></i>
     } @else {
-      <-
+      <i class="bi bi-arrow-right-circle-fill" style="font-size: 30px; color:rgb(255, 0, 170)"></i>
    }
   </div>
 </div>

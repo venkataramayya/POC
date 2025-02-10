@@ -1,20 +1,21 @@
 
 .sidebar {
-  width: 270px;
-  margin: 30px;
+  width: 230px;
+  margin: 10px;
   position: sticky;
   z-index: 1;
   top: 30px;
-  background-color:rgb(71, 71, 119);
+  background-color:hsl(236, 28%, 39%);
   color: white;
   transition: width 0.3s ease;
   overflow: hidden;
   border-radius: 10px;
-  padding: 20px 0;
+  padding: 10x 0;
+  margin-top: 0px;
 }
 
 .sidebar.collapsed {
-  width: 60px;
+  width: 59px;
 }
 
 .menu-section {
@@ -39,7 +40,7 @@
 }
 
 .text {
-  font-size: 16px;
+  font-size: 19px;
   white-space: nowrap;
 }
 
@@ -65,7 +66,7 @@
   display: inline;
   position: absolute;
   left: 60px;
-  background-color: #2c3e50;
+  background-color: #49285c;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -82,9 +83,11 @@
 }
 
 .bar {
-  margin-top: 80px;
+  margin-top: 5px;
   height: 600px;
   overflow-y: auto;
   -ms-overflow-style: none;  /* Hides scrollbar in IE/Edge */
   scrollbar-width: none;
+
+
 }
